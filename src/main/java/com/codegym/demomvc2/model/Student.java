@@ -8,6 +8,7 @@ public class Student {
         this.id = id;
         this.name = name;
     }
+    public Student() {}
 
     public int getId() {
         return id;

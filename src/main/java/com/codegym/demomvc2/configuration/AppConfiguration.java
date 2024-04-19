@@ -1,5 +1,6 @@
 package com.codegym.demomvc2.configuration;
 
+import com.codegym.demomvc2.service.StudentService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,9 +20,10 @@ public class AppConfiguration implements WebMvcConfigurer {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
+    @Bean
+    public StudentService studentService() {
+        return new StudentService();
+    }
 
-//    @Bean
-//    public ICustomerService customerService() {
-//        return new SimpleCustomerServiceImpl();
-//    }
+
 }
